@@ -68,6 +68,9 @@ function c40240595.checkop(e,tp,eg,ep,ev,re,r,rp)
 	local c=e:GetHandler()
 	local ct=c:GetTurnCounter()
 	ct=ct+1
+	if Duel.GetFlagEffect(tp,514000014)~=0 then
+	ct=ct+1
+	end
 	c:SetTurnCounter(ct)
 end
 function c40240595.eqlimit(e,c)
